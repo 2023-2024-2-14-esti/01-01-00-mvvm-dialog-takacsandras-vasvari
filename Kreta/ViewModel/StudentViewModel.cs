@@ -38,6 +38,8 @@ namespace Kreta.ViewModel
         public void DoNewStudent()
         {
             Student = new Student();
+            Student.BirthsDay = DateTime.Now.AddYears(-14);
+            OnPropertyChanged(nameof(Student));
         }
     }
 }
